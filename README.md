@@ -11,3 +11,8 @@ Welcome to my project. Visit the [Home](https://yjliu212.github.io/hello-world/)
 [Python for rock physicist - Chapter 1 Formated](/Chapter_1_Formated.html)
 
 [Python for rock physicist - Chapter 2](/Chapter_2.html)
+
+
+# My CV
+
+[Here](/My_CV.html) is my CV.
