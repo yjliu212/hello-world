@@ -4,7 +4,7 @@ test test test
 
 # My Project
 
-Welcome to my project. Visit the [Home](https://yjliu212.github.io/hello-world/) page for more information.
+Visit the [Home](https://yjliu212.github.io/hello-world/) page for more information.
 
 [Python for rock physicist - Chapter 1](/Chapter_1.html)
 
