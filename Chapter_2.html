@@ -1,235 +1,0 @@
-
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Chapter 2</title>
-    </head>
-    <body>
-    <p>Chapter 2: Compaction Trend Modeling</p>
-<p>Theoretical Background on Compaction Trends in Sedimentary Basins</p>
-<p>Compaction in sedimentary basins is a key process that influences rock properties, pore pressure, and subsurface fluid dynamics. It occurs as sediments are progressively buried under overlying layers, causing the grains to rearrange, reduce porosity, and increase bulk density. Understanding compaction trends is crucial for predicting the physical properties of subsurface rocks, which play a significant role in hydrocarbon exploration, reservoir management, and geotechnical studies.</p>
-<p>Compaction Process in Sedimentary Basins</p>
-<p>In sedimentary basins, compaction is primarily driven by the weight of overburden layers. As sediments accumulate over geological timescales, the increasing pressure from overlying layers causes a reduction in pore space and an increase in bulk density. Compaction can be broken down into two major types:</p>
-<p>1.	Mechanical Compaction Mechanical compaction occurs at relatively shallow depths and low temperatures. This process involves the physical rearrangement of grains, with water being expelled from the pore space as grains become more tightly packed. In this phase, porosity and density change rapidly with depth, and rock properties like seismic velocity begin to reflect the increased stress on the sediment grains.</p>
-<p>2.	Chemical Compaction (Diagenesis) Chemical compaction, or diagenesis, takes place at greater depths where temperature and pressure conditions are higher. This process involves the chemical alteration of mineral grains, often leading to cementation, dissolution, or recrystallization. As diagenesis progresses, the porosity reduction is less pronounced than in mechanical compaction, but the rock framework becomes stiffer due to cementation, significantly altering seismic velocities and rock strength.</p>
-<p>The combined effect of mechanical and chemical compaction results in characteristic trends in porosity, density, and seismic velocity as a function of depth, which we refer to as compaction trends. These trends are fundamental for predicting rock properties in unexplored or under-sampled parts of the basin.</p>
-<p>Empirical Models of Compaction Trends</p>
-<p>Several empirical relationships have been developed to describe the variation of porosity and other rock properties with depth. These models are based on data from well logs and core samples and are often used to estimate rock properties in new areas of a basin. Some of the most common models include:</p>
-<p>1.	Athy’s Law One of the simplest and most widely used empirical models for compaction trends is Athy’s Law, which describes how porosity decreases exponentially with depth. This model is particularly applicable for shales and fine-grained sediments. The general form of Athy’s Law is: ϕ(z)=ϕ0e−czϕ(z)=ϕ0 e−cz where:</p>
-<p>•	ϕ(z)ϕ(z) is the porosity at depth zz,</p>
-<p>•	ϕ0ϕ0 is the surface porosity (porosity at z=0z=0),</p>
-<p>•	cc is the compaction coefficient, and</p>
-<p>•	zz is the depth.</p>
-<p>2.	Athy’s Law provides a first approximation for predicting porosity with depth, though it doesn’t account for variations in lithology or diagenetic effects.</p>
-<p>3.	Equivalent Depth Models Equivalent depth models offer a more flexible approach by incorporating different sedimentary layers and their unique compaction rates. These models adjust the compaction coefficient based on lithology, pore fluid content, and other factors, leading to a more accurate representation of the porosity-depth relationship.</p>
-<p>4.	Geomechanical Compaction Models For more accurate modeling of compaction, geomechanical models consider both the mechanical and chemical processes that affect rock properties. These models integrate the porosity reduction with stress-strain relationships, which provide a more comprehensive understanding of how rocks compact under both vertical and horizontal stresses. These models are often calibrated using laboratory measurements or in-situ stress data from wells.</p>
-<p>5.	Porosity-Effective Stress Models Porosity is not only a function of depth but also of effective stress, which accounts for the difference between the overburden stress and the pore pressure. In cases where overpressure is present in a sedimentary basin, the effective stress is reduced, slowing down the compaction process. Porosity-effective stress models take into account the relationship between porosity and effective stress: ϕ=ϕ0−Alog⁡(σ′)ϕ=ϕ0 −Alog(σ′) where:</p>
-<p>•	ϕϕ is porosity,</p>
-<p>•	ϕ0ϕ0 is the surface porosity,</p>
-<p>•	AA is a constant dependent on lithology,</p>
-<p>•	σ′σ′ is the effective stress.</p>
-<p>6.	These models are critical for pore pressure prediction, especially in deepwater basins where overpressure is common.</p>
-<p>Compaction Trend Applications</p>
-<p>Compaction trends are used in a variety of geophysical and geological applications:</p>
-<p>1.	Pore Pressure Prediction The reduction in porosity with depth is a key factor in predicting pore pressure. Abnormally high pore pressures, or overpressure, can be inferred when porosity at a given depth is higher than expected, indicating that compaction has not proceeded normally due to trapped fluids. Accurate modeling of compaction trends helps geophysicists predict overpressure zones, which are crucial for drilling safety and reservoir management.</p>
-<p>2.	Seismic Velocity Modeling Compaction affects the seismic velocities (P-wave and S-wave) of rocks, as velocity increases with increasing density and reduced porosity. Seismic velocity models that incorporate compaction trends help in the interpretation of seismic data by providing more accurate estimates of rock properties at depth. This is particularly important for seismic inversion and amplitude variation with offset (AVO) analysis.</p>
-<p>3.	Reservoir Characterization Understanding compaction trends helps in predicting reservoir quality, especially in clastic reservoirs where porosity and permeability are critical for hydrocarbon storage and flow. Compaction models allow geoscientists to estimate how much porosity remains at depth, which directly impacts reservoir performance and production potential.</p>
-<p>4.	Basin Modeling Compaction trends are also vital for basin modeling, where geologists simulate the burial history of a basin over time. By integrating compaction trends into basin models, geoscientists can predict how sediments have evolved over geological timescales, including changes in porosity, fluid migration, and heat flow.</p>
-<p>In the next section, we will dive into Python implementations of compaction trend models, including how to build and visualize these trends using real well log data. Through practical examples, you’ll learn how to model porosity, density, and seismic velocity changes with depth using Python’s powerful numerical and visualization libraries.</p>
-<p>Modeling Depth-Dependent Porosity Reduction and Velocity Changes</p>
-<p>In sedimentary basins, the reduction of porosity with increasing depth is a key indicator of how rocks compact under overburden pressure. This compaction, in turn, affects the seismic velocity of the rocks, as decreasing porosity leads to higher density and stiffer rock frameworks. Understanding and modeling these relationships is critical for seismic interpretation, reservoir characterization, and pore pressure prediction.</p>
-<p>This section explores how we can model the depth-dependent reduction in porosity and the associated changes in seismic velocity using both empirical and physics-based approaches. Python will be employed to calculate and visualize these compaction trends in practice.</p>
-<p>Porosity Reduction with Depth</p>
-<p>Porosity is one of the most important rock properties for understanding subsurface conditions. As sediment is buried, its porosity decreases due to mechanical and chemical compaction. Various empirical models, such as Athy’s Law, are used to describe the relationship between porosity and depth.</p>
-<p>Athy’s Law for Porosity Reduction</p>
-<p>Athy’s Law provides a simple exponential relationship between porosity and depth. It is particularly applicable for shales and fine-grained sediments, where mechanical compaction dominates. The law can be written as:</p>
-<p>ϕ(z)=ϕ0e−czϕ(z)=ϕ0 e−cz</p>
-<p>where:</p>
-<p>•	ϕ(z)ϕ(z) is the porosity at depth zz,</p>
-<p>•	ϕ0ϕ0 is the surface porosity (porosity at depth z=0z=0),</p>
-<p>•	cc is the compaction coefficient (specific to the lithology), and</p>
-<p>•	zz is the depth in meters or feet.</p>
-<p>Using this equation, we can model how porosity decreases with depth in a given sedimentary basin. The compaction coefficient, cc, varies depending on the lithology and basin history, and is typically derived from well log data.</p>
-<p>Velocity Changes with Depth</p>
-<p>Seismic velocities (P-wave velocity, VpVp , and S-wave velocity, VsVs ) are closely related to the porosity and density of rocks. As porosity decreases with depth, rocks become denser and stiffer, resulting in higher seismic velocities. The velocity-porosity relationship is often modeled using empirical relationships, such as the Raymer-Hunt-Gardner equation or Castagna’s relationships.</p>
-<p>Raymer-Hunt-Gardner Equation for P-wave Velocity</p>
-<p>The Raymer-Hunt-Gardner equation provides an empirical relationship between porosity and P-wave velocity, particularly for clastic sediments such as sandstones and shales. The equation is expressed as:</p>
-<p>Vp=(1−ϕ)Vm+ϕVfVp =(1−ϕ)Vm +ϕVf</p>
-<p>where:</p>
-<p>•	VpVp is the P-wave velocity of the rock,</p>
-<p>•	ϕϕ is the porosity,</p>
-<p>•	VmVm is the matrix (rock grain) velocity, and</p>
-<p>•	VfVf is the fluid velocity (velocity of the pore fluids, usually water).</p>
-<p>This equation assumes that seismic velocity is a linear mixture of the matrix velocity and the pore fluid velocity. As the porosity decreases, the rock becomes more dominated by the matrix, leading to an increase in VpVp .</p>
-<p>Modeling S-wave Velocity Using Castagna’s Equation</p>
-<p>For S-wave velocity, Castagna’s relationships provide an empirical formula that links VpVp and VsVs . This is particularly useful when S-wave measurements are not available. The equation is written as:</p>
-<p>Vs=aVp+bVs =aVp +b</p>
-<p>where:</p>
-<p>•	VsVs is the S-wave velocity,</p>
-<p>•	VpVp is the P-wave velocity,</p>
-<p>•	aa and bb are empirically derived coefficients (typically based on rock type and lithology).</p>
-<p>Python Implementation: Porosity and Velocity Models</p>
-<p>We can now implement these equations using Python to model depth-dependent changes in porosity and seismic velocity. In this example, we’ll use the Athy’s Law model for porosity reduction and the Raymer-Hunt-Gardner equation for P-wave velocity.</p>
-<p>Here’s how we can model and plot these relationships:</p>
-<p>python</p>
-<p>Copy code</p>
-<p>import numpy as np</p>
-<p>import matplotlib.pyplot as plt</p>
-<p></p>
-<p># Parameters for the model</p>
-<p>phi_0 = 0.4  # Surface porosity (fraction)</p>
-<p>c = 0.0005   # Compaction coefficient (1/m)</p>
-<p>V_m = 4000   # Matrix velocity (m/s)</p>
-<p>V_f = 1500   # Fluid velocity (water, m/s)</p>
-<p></p>
-<p># Depth range (in meters)</p>
-<p>depth = np.linspace(0, 4000, 1000)</p>
-<p></p>
-<p># Porosity reduction using Athy's Law</p>
-<p>porosity = phi_0 * np.exp(-c * depth)</p>
-<p></p>
-<p># P-wave velocity using the Raymer-Hunt-Gardner equation</p>
-<p>Vp = (1 - porosity) * V_m + porosity * V_f</p>
-<p></p>
-<p># Plotting porosity vs depth</p>
-<p>plt.figure(figsize=(10, 6))</p>
-<p>plt.subplot(1, 2, 1)</p>
-<p>plt.plot(porosity, depth, label='Porosity', color='b')</p>
-<p>plt.gca().invert_yaxis()  # Invert depth axis</p>
-<p>plt.xlabel('Porosity (fraction)')</p>
-<p>plt.ylabel('Depth (m)')</p>
-<p>plt.title('Porosity vs. Depth')</p>
-<p>plt.grid(True)</p>
-<p>plt.legend()</p>
-<p></p>
-<p># Plotting P-wave velocity vs depth</p>
-<p>plt.subplot(1, 2, 2)</p>
-<p>plt.plot(Vp, depth, label='P-wave Velocity', color='r')</p>
-<p>plt.gca().invert_yaxis()</p>
-<p>plt.xlabel('P-wave Velocity (m/s)')</p>
-<p>plt.ylabel('Depth (m)')</p>
-<p>plt.title('P-wave Velocity vs. Depth')</p>
-<p>plt.grid(True)</p>
-<p>plt.legend()</p>
-<p></p>
-<p>plt.tight_layout()</p>
-<p>plt.show()</p>
-<p></p>
-<p>Explanation of the Python Code</p>
-<p>1.	Porosity Reduction We use Athy’s Law to model how porosity decreases exponentially with depth. The phi_0 parameter represents the surface porosity, and c is the compaction coefficient that controls how rapidly porosity decreases with depth. The function np.exp(-c * depth) calculates the porosity at each depth point.</p>
-<p>2.	P-wave Velocity The Raymer-Hunt-Gardner equation is used to calculate P-wave velocity as a function of porosity. The rock's velocity is modeled as a combination of the matrix velocity (V_m) and the fluid velocity (V_f), weighted by the porosity at each depth.</p>
-<p>3.	Plotting Two subplots are created to visualize the relationships:</p>
-<p>•	The first plot shows porosity decreasing with depth.</p>
-<p>•	The second plot shows the corresponding increase in P-wave velocity with depth.</p>
-<p>Interpreting the Results</p>
-<p>The plots clearly show how porosity decreases exponentially with depth, while P-wave velocity increases as porosity decreases. This reflects the compaction of sediments and the stiffening of the rock framework as the sediments are buried deeper. The seismic velocities derived from these models can be directly compared to well log data or used in seismic inversion for subsurface characterization.</p>
-<p>Extending the Model: Incorporating Lithology and Diagenesis</p>
-<p>While the example above focuses on a single compaction trend, in reality, sedimentary basins often contain multiple lithologies, each with its own compaction behavior. For example, sandstones, shales, and carbonates compact at different rates. Additionally, diagenetic processes such as cementation or mineral alteration can further modify porosity and velocity trends at greater depths.</p>
-<p>To extend the model:</p>
-<p>•	Lithology-dependent parameters (e.g., matrix velocities and compaction coefficients) can be introduced.</p>
-<p>•	The effects of diagenesis can be modeled by adjusting the compaction trends or introducing new velocity-porosity relationships at greater depths.</p>
-<p>In the next section, we will expand this basic model to account for lithology changes, incorporating more sophisticated rock physics models that address the complexity of real-world sedimentary basins.</p>
-<p>Python Code Example: Simulating Porosity-Depth Trends and Plotting Velocity vs. Depth for Different Lithologies</p>
-<p>Now that we’ve explored the theoretical background of porosity reduction and velocity changes with depth, let's implement a more advanced Python example to simulate porosity-depth trends and plot seismic velocity versus depth for different lithologies. In real-world scenarios, lithologies such as sandstones, shales, and carbonates compact at different rates, which affects their porosity and seismic velocities. In this example, we will simulate these trends and visualize them using Python.</p>
-<p>Step 1: Simulating Porosity-Depth Trends for Different Lithologies</p>
-<p>To simulate porosity trends for different lithologies, we can use the general form of Athy’s Law:</p>
-<p>ϕ(z)=ϕ0e−czϕ(z)=ϕ0 e−cz</p>
-<p>Different lithologies (e.g., sandstone, shale, and carbonate) have different surface porosities and compaction coefficients. Let’s assume the following values:</p>
-<p>•	Sandstone: ϕ0=0.35ϕ0 =0.35, c=0.0003c=0.0003</p>
-<p>•	Shale: ϕ0=0.45ϕ0 =0.45, c=0.0005c=0.0005</p>
-<p>•	Carbonate: ϕ0=0.25ϕ0 =0.25, c=0.0002c=0.0002</p>
-<p>We will simulate the porosity reduction for these three lithologies over a depth range of 0 to 4000 meters.</p>
-<p>Step 2: Calculating and Plotting Velocity vs. Depth for Different Lithologies</p>
-<p>For velocity modeling, we’ll use the Raymer-Hunt-Gardner equation for P-wave velocity:</p>
-<p>Vp=(1−ϕ)Vm+ϕVfVp =(1−ϕ)Vm +ϕVf</p>
-<p>Where:</p>
-<p>•	VmVm is the matrix velocity (specific to each lithology),</p>
-<p>•	VfVf is the fluid velocity (assumed to be the same for all lithologies, representing water).</p>
-<p>Matrix velocities for different lithologies are:</p>
-<p>•	Sandstone: Vm=4500 m/sVm =4500m/s</p>
-<p>•	Shale: Vm=3500 m/sVm =3500m/s</p>
-<p>•	Carbonate: Vm=6000 m/sVm =6000m/s</p>
-<p>The fluid velocity VfVf is assumed to be 1500 m/s (for water).</p>
-<p>Python Code Implementation</p>
-<p>python</p>
-<p>Copy code</p>
-<p>import numpy as np</p>
-<p>import matplotlib.pyplot as plt</p>
-<p></p>
-<p># Depth range (in meters)</p>
-<p>depth = np.linspace(0, 4000, 1000)</p>
-<p></p>
-<p># Parameters for different lithologies</p>
-<p>lithologies = {</p>
-<p>'Sandstone': {'phi_0': 0.35, 'c': 0.0003, 'V_m': 4500},</p>
-<p>'Shale': {'phi_0': 0.45, 'c': 0.0005, 'V_m': 3500},</p>
-<p>'Carbonate': {'phi_0': 0.25, 'c': 0.0002, 'V_m': 6000}</p>
-<p>}</p>
-<p></p>
-<p># Fluid velocity (m/s)</p>
-<p>V_f = 1500</p>
-<p></p>
-<p># Create subplots for porosity-depth and velocity-depth plots</p>
-<p>fig, axes = plt.subplots(1, 2, figsize=(14, 6))</p>
-<p>axes[0].invert_yaxis()  # Invert y-axis for depth</p>
-<p>axes[1].invert_yaxis()</p>
-<p></p>
-<p># Loop over each lithology and calculate porosity and velocity</p>
-<p>for lithology, params in lithologies.items():</p>
-<p># Extract parameters</p>
-<p>phi_0 = params['phi_0']</p>
-<p>c = params['c']</p>
-<p>V_m = params['V_m']</p>
-<p></p>
-<p># Calculate porosity using Athy's Law</p>
-<p>porosity = phi_0 * np.exp(-c * depth)</p>
-<p></p>
-<p># Calculate P-wave velocity using Raymer-Hunt-Gardner equation</p>
-<p>Vp = (1 - porosity) * V_m + porosity * V_f</p>
-<p></p>
-<p># Plot porosity vs depth</p>
-<p>axes[0].plot(porosity, depth, label=f'{lithology}', linewidth=2)</p>
-<p></p>
-<p># Plot velocity vs depth</p>
-<p>axes[1].plot(Vp, depth, label=f'{lithology}', linewidth=2)</p>
-<p></p>
-<p># Formatting the porosity-depth plot</p>
-<p>axes[0].set_xlabel('Porosity (fraction)')</p>
-<p>axes[0].set_ylabel('Depth (m)')</p>
-<p>axes[0].set_title('Porosity vs. Depth')</p>
-<p>axes[0].grid(True)</p>
-<p>axes[0].legend()</p>
-<p></p>
-<p># Formatting the velocity-depth plot</p>
-<p>axes[1].set_xlabel('P-wave Velocity (m/s)')</p>
-<p>axes[1].set_ylabel('Depth (m)')</p>
-<p>axes[1].set_title('P-wave Velocity vs. Depth')</p>
-<p>axes[1].grid(True)</p>
-<p>axes[1].legend()</p>
-<p></p>
-<p>plt.tight_layout()</p>
-<p>plt.show()</p>
-<p></p>
-<p>Step 3: Explanation of the Python Code</p>
-<p>1.	Defining the Depth Range We simulate the porosity and velocity trends over a depth range of 0 to 4000 meters, with 1000 depth points.</p>
-<p>2.	Lithology Parameters We define the surface porosity (ϕ0ϕ0 ), compaction coefficient (cc), and matrix velocity (VmVm ) for three different lithologies: sandstone, shale, and carbonate. These parameters are stored in a dictionary for easy access.</p>
-<p>3.	Calculating Porosity Using Athy’s Law, we calculate the porosity for each lithology as a function of depth. The exponential decay in porosity reflects the progressive compaction of sediments with increasing burial depth.</p>
-<p>4.	Calculating P-wave Velocity The Raymer-Hunt-Gardner equation is used to calculate the P-wave velocity for each lithology. The seismic velocity increases as porosity decreases, with the matrix velocity (VmVm ) dominating at greater depths.</p>
-<p>5.	Plotting Porosity vs. Depth The first subplot shows the porosity trends for sandstone, shale, and carbonate as a function of depth. Porosity decreases more rapidly for shale due to its higher compaction coefficient, while carbonate retains higher porosity at depth.</p>
-<p>6.	Plotting P-wave Velocity vs. Depth The second subplot shows how the P-wave velocity increases with depth for each lithology. Carbonate, with its higher matrix velocity, shows the highest seismic velocities, followed by sandstone and shale.</p>
-<p>Step 4: Interpreting the Results</p>
-<p>•	Porosity-Depth Trends: As expected, porosity decreases exponentially with depth for all lithologies. Shale, with the highest compaction coefficient, shows the most rapid porosity reduction, while carbonate, with the lowest compaction coefficient, retains porosity for a greater depth range.</p>
-<p>•	Velocity-Depth Trends: The velocity-depth plots reflect the differences in lithology. Carbonate, being the stiffest material, shows the highest P-wave velocities, while shale has the lowest velocities. Sandstone lies in between. These trends are critical for seismic interpretation, as they allow us to estimate the type of rock and its properties based on seismic velocity data.</p>
-<p>Extending the Model</p>
-<p>This basic model can be extended in several ways:</p>
-<p>1.	Adding S-wave Velocity Calculation: Using Castagna’s equation, we can calculate S-wave velocity for each lithology and plot it alongside the P-wave velocities.</p>
-<p>2.	Incorporating Effective Stress: You can refine the porosity model by including effective stress, which accounts for the difference between overburden pressure and pore pressure. This is particularly useful for modeling overpressured basins.</p>
-<p>3.	Including Multiple Fluid Phases: The model currently assumes water as the pore fluid. In practice, pore fluids can include hydrocarbons (oil and gas), which would alter the seismic velocities. Adding multiple fluid phases would provide a more comprehensive view of velocity changes with depth.</p>
-<p></p>
-<p></p>
-
-    </body>
-    </html>
-    
