@@ -27,9 +27,7 @@ I am a seasoned geoscientist with over 15 years of experience in rock physics, q
 
 Feel free to explore my repositories and reach out if you have any questions or collaboration ideas.
 
-# My On-going Project
-
-Visit the [Home](https://yjliu212.github.io/hello-world/) page for more information.
+# My Other Projects
 
 [Python for rock physicist - Chapter 1](/Chapter_1.html)
 
@@ -37,4 +35,5 @@ Visit the [Home](https://yjliu212.github.io/hello-world/) page for more informat
 
 # My CV
 
-[Here](/My_CV.html) is my CV.
+[Here](/My_CV.html) is my CV
+
