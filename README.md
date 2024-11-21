@@ -29,9 +29,9 @@ Feel free to explore my repositories and reach out if you have any questions or 
 
 # My Other Projects
 
-- **[Python for rock physicist - Chapter 1](/Chapter_1.html):** 
+- **[Python for rock physicist - Chapter 1](/Chapter_1.html)** 
 
-- **[Python for rock physicist - Chapter 2](/Chapter_2.html):**
+- **[Python for rock physicist - Chapter 2](/Chapter_2.html)**
 
 # My CV
 
