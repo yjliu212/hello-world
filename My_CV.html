@@ -7,82 +7,100 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
         }
-        h1, h2, h3 {
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1, h2 {
             color: #333;
         }
-        .section-title {
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
+        a {
+            color: #007bff;
+            text-decoration: none;
         }
-        .project-highlight, .collaboration, .key-project {
-            margin-left: 20px;
+        a:hover {
+            text-decoration: underline;
+        }
+        .skills, .projects, .experience {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Yangjun (Kevin) Liu</h1>
+        <p>Rock Physics Expert | QI and Pore Pressure Specialist | Geomechanics & AVO Analyst</p>
+    </header>
+    <div class="container">
+        <h2>Contact Information</h2>
+        <p>Email: <a href="mailto:yjliu2007@gmail.com">yjliu2007@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/yjliu212">https://github.com/yjliu212</a></p>
 
-    <h1>Yangjun (Kevin) Liu</h1>
-    <h2>Rock Physics Expert | QI and Pore Pressure Specialist | Geomechanics & AVO Analyst</h2>
-    <p>Email: <a href="mailto: yjliu2007@gmail.com">yjliu2007@gmail.com</a> | GitHub: <a href="https://github.com/yjliu212">https://github.com/yjliu212</a></p>
+        <h2>Profile</h2>
+        <p>I am a seasoned geoscientist with over 15 years of experience in rock physics, QI, and geomechanics, specializing in pore pressure prediction. I have contributed to over 30 journal articles in geophysics, rock physics, and pore pressure prediction, and possess a strong foundation in Python and MATLAB for rock physics, AVO, and mechanical earth modeling (MEM). My work has consistently earned recognition, including PBS gold and bronze awards at SLB, where I led significant projects in oil and gas exploration.</p>
 
-    <h2 class="section-title">Profile</h2>
-    <p>I am a seasoned geoscientist with over 15 years of experience in <a href="https://github.com/yjliu212/Basin-wide-rock-physics---3D">rock physics</a>, <a href="https://github.com/yjliu212/Sand-RPT-Compare-Different-Sand-Models">QI</a> and <a href="https://github.com/yjliu212/Stress-concentration---3D">geomechanics</a>, specializing in <a href="https://github.com/yjliu212/Predict-Beta-Function-Using-Neural-Network">pore pressure prediction</a>. I have contributed to over 30 journal articles in geophysics, rock physics, and pore pressure prediction, and possess a strong foundation in Python and MATLAB for rock physics, AVO, and mechanical earth modeling (MEM). My work has consistently earned recognition, including PBS gold and bronze awards at SLB, where I led significant projects in oil and gas exploration.</p>
+        <h2>Professional Experience</h2>
+        <h3>SLB (Schlumberger) — Rock Physicist (2009 – 2024)</h3>
+        <ul class="experience">
+            <li>Led rock physics modeling, pore pressure prediction, and stress field prediction for oil and gas exploration, focusing on the Campeche area, Southern Gulf of Mexico.</li>
+            <li>Developed velocity and density models, using Python and MATLAB, for seismic AVO analysis, MEM, and QI workflows.</li>
+            <li>Contributed to joint operations modeling gas hydrate formation in wells, focusing on heat exchange and reservoir dynamics.</li>
+            <li>Collaborated with experts like Nader Dutta, delivering high-impact results on seismic and geomechanical studies.</li>
+            <li>Awarded PBS gold and bronze recognition for excellence in geophysical analysis and rock physics workflows.</li>
+        </ul>
 
-    <h2 class="section-title">Professional Experience</h2>
-    <h3>SLB (Schlumberger) — Rock Physicist (2009 – 2024)</h3>
-    <ul>
-        <li>Led rock physics modeling, pore pressure prediction, and stress field prediction for oil and gas exploration, focusing on the Campeche area, Southern Gulf of Mexico.</li>
-        <li>Developed velocity and density models, using Python and MATLAB, for seismic AVO analysis, MEM, and QI workflows.</li>
-        <li>Contributed to joint operations modeling gas hydrate formation in wells, focusing on heat exchange and reservoir dynamics.</li>
-        <li>Collaborated with experts like Nader Dutta, delivering high-impact results on seismic and geomechanical studies.</li>
-        <li>Awarded PBS gold and bronze recognition for excellence in geophysical analysis and rock physics workflows.</li>
-    </ul>
+        <h3>Recent Projects</h3>
+        <ul class="projects">
+            <li><strong>Pore Pressure Prediction Using Deep Neural Networks</strong>
+                <ul>
+                    <li>Designed and implemented a DNN with three fully connected layers for accurate prediction of the diagenesis Beta function, a critical factor in pore pressure analysis.</li>
+                    <li>Applied advanced data preprocessing and feature engineering to optimize model performance in challenging high-temperature, high-pressure scenarios.</li>
+                    <li>Shared project details and code on <a href="https://github.com/yjliu212/Predict-Beta-Function-Using-Neural-Network">GitHub</a>.</li>
+                </ul>
+            </li>
+        </ul>
 
-    <h3>Project Highlights:</h3>
-    <ul class="project-highlight">
-        <li>Spearheaded QI analysis for Campeche Basin (2021-2022), producing critical insights into pore pressure, AVO response, and seismic interpretations.</li>
-        <li>Built 3D rock property models, including sand bodies, oil/gas contents, and seismic responses, with plans for 3D stress field modeling.</li>
-        <li>Introduced innovative Python workflows for stress field prediction around borehole and salt bodies.</li>
-    </ul>
+        <h2>Skills & Expertise</h2>
+        <ul class="skills">
+            <li><strong>Neural Networks and Machine Learning:</strong>
+                <ul>
+                    <li>Developed a Deep Neural Network (DNN) model for pore pressure prediction, focusing on high-temperature and high-pressure environments.</li>
+                    <li>Proficient in Python machine learning libraries such as TensorFlow, Keras, and Scikit-learn for geoscientific applications.</li>
+                    <li>Experienced in creating data-driven workflows for geophysical modeling using advanced AI techniques.</li>
+                </ul>
+            </li>
+            <li><strong>Rock Physics:</strong> Pore pressure prediction, AVO modeling, rock velocity modeling (1D, 2D, 3D).</li>
+            <li><strong>Geomechanics:</strong> Mechanical Earth Models (MEM), stress field prediction, seismic interpretation.</li>
+            <li><strong>Software & Coding:</strong> Python, MATLAB, PetroMod, Petrel, Techlog.</li>
+            <li><strong>Seismic Analysis:</strong> Quantitative Interpretation (QI), basin modeling, AVO inversion.</li>
+            <li><strong>Data Science:</strong> Application of machine learning to discover new physical models (Generative AI, physics-informed AI).</li>
+        </ul>
 
-    <h3>Notable Collaborations:</h3>
-    <ul class="collaboration">
-        <li>Communicated with <strong>Nader Dutta</strong> at Stanford, engaging in discussions on using Deep Neural Networks to build pore pressure prediction models involving diagenesis Beta function. 
-    (<a href="https://github.com/yjliu212/Predict-Beta-Function-Using-Neural-Network" target="_blank">GitHub Repository</a>)
-</li>
-    </ul>
+        <h2>Publications</h2>
+        <p>Authored and co-authored over 30 peer-reviewed papers in rock physics, geophysics, and pore pressure prediction, referenced in works like <em>Quantitative Analysis of Geopressure for Geoscientists and Engineers</em> by Nader Dutta.</p>
 
-    <h2 class="section-title">Skills & Expertise</h2>
-    <ul>
-        <li>Rock Physics: Pore pressure prediction, AVO modeling, rock velocity modeling (1D, 2D, 3D).</li>
-        <li>Geomechanics: Mechanical Earth Models (MEM), stress field prediction, seismic interpretation.</li>
-        <li>Software & Coding: Python, MATLAB, PetroMod, Petrel, Techlog.</li>
-        <li>Seismic Analysis: Quantitative Interpretation (QI), basin modeling, AVO inversion.</li>
-        <li>Data Science: Application of machine learning to discover new physical models (Generative AI, physics-informed AI).</li>
-    </ul>
+        <h2>Education & Certification</h2>
+        <ul>
+            <li>M.S. in Geophysics, University of Houston, 2009, Advisor: John Castagna</li>
+            <li>Certified in Pore Pressure Prediction and Basin Modeling</li>
+            <li>Certified in AVO Inversion and Geomechanics</li>
+        </ul>
 
-    <h2 class="section-title">Publications</h2>
-    <p>Authored and co-authored over 30 peer-reviewed papers in rock physics, geophysics, and pore pressure prediction, referenced in works like <i>Quantitative Analysis of Geopressure for Geoscientists and Engineers</i> by Nader Dutta.</p>
-
-    <h2 class="section-title">Education & Certification</h2>
-    <ul>
-        <li>M.S. in Geophysics, University of Houston, 2009, Advisor: John Castagna</li>
-        <li>Certified in Pore Pressure Prediction and Basin Modeling</li>
-        <li>Certified in AVO Inversion and Geomechanics</li>
-    </ul>
-
-    <h2 class="section-title">Awards & Recognition</h2>
-    <ul>
-        <li>PBS Gold and Bronze Awards for excellence in rock physics modeling and geophysical exploration (SLB).</li>
-    </ul>
-
-    <h2 class="section-title">Contact & GitHub</h2>
-    <p>GitHub: <a href="https://github.com/yjliu212">https://github.com/yjliu212</a><br>
-    Email: <a href="mailto: yjliu2007@gmail.com">yjliu2007@gmail.com</a></p>
-
+        <h2>Awards & Recognition</h2>
+        <ul>
+            <li>PBS Gold and Bronze Awards for excellence in rock physics modeling and geophysical exploration (SLB).</li>
+        </ul>
+    </div>
 </body>
 </html>
