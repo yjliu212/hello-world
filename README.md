@@ -23,7 +23,7 @@ I am a seasoned geoscientist with over 15 years of experience in rock physics, q
 ## Connect with Me
 
 - **Email:** [yjliu2007@gmail.com](mailto:yjliu2007@gmail.com)
-- **LinkedIn:** [linkedin.com/in/kevin-liu-geophysics](https://www.linkedin.com/in/kevin-liu-geophysics)
+- **LinkedIn:** [https://www.linkedin.com/in/kevin-liu-geophysics](https://www.linkedin.com/in/yangjun-kevin-liu-15004046/)
 
 Feel free to explore my repositories and reach out if you have any questions or collaboration ideas.
 
